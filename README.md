@@ -1,8 +1,68 @@
-deployed at http://pano-priyank.netlify.app
+Deployed at http://pano-priyank.netlify.app .
+
+Here I have made a 360 degree image tour of my house terrace. This projects is for demo purpose to show that in a large scale this technique can be used for making full tour of real-estate properties, institution, monumnets, etc. Since, we are still in the state of pandemic it was necessary to work towards creating virtual reality experinece for web.
+
+For this i have used panellum-react library for rendering of images as 360 degree panaroma.
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with,
 
+### `npx create-react-app imagepanaroma`
+
+Then we installed library panellum-react using,
+
+### `npm i panellum-react`
+
+After this we used panellum code to render image,
+
+```javascript
+<Pannellum
+        width="100%"
+        height="100vh"
+        image={image}
+        pitch={10}
+        yaw={10}
+        hfov={110}
+        autoRotate={2}
+        autoLoad
+        onLoad={() => {
+            console.log("panorama loaded");
+        }}
+    >
+```
+This shows the image in 360 view that rotates automatically. To add position of navigation we used .hotspot feature,
+```javascript
+<Pannellum.Hotspot
+   type="custom"
+   pitch={pitch1}
+   yaw={yaw1}
+  tooltip={hotspotIcon}
+   handleClick={(evt, name) => {
+     const Object = Detail[id1];
+     setid1(Object.id1);
+     setid2(Object.id2);
+     setyaw1(Object.yaw1);
+     setyaw2(Object.yaw2);
+     setpitch1(Object.pitch1);
+     setpitch2(Object.pitch2);
+     setimage(Object.image);
+  }}
+/>
+```
+Here, handleClick function takes data from Detail array and displays the new image with new hotspot dynamically. Now to get hotspotIcon as Tooltip we need to define it. For that,
+
+```javascript
+const hotspotIcon = (hotSpotDiv) => {
+  const image = document.createElement('img');
+  image.classList.add('image');
+  image.setAttribute('width', '60');
+  image.setAttribute('height', '60');
+  image.setAttribute('src',    "https://img.icons8.com/fluent/100/000000/long-arrow-up.png");
+  hotSpotDiv.appendChild(image);
+}
+```
+Thats, how we coded this sample app.
 ## Available Scripts
 
 In the project directory, you can run:
@@ -30,42 +90,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This app is deployed using netlify at http://pano-priyank.netlify.app .
+To deploy we use script `npm run build` to generate static site at build folder and drag and drop that to netlify.com console.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
