@@ -1,7 +1,7 @@
 export const Detail=[
     {
        id: 0,
-       image: "new.jpeg",
+       image: "1.jpeg",
        pitch1: 184.41,
        pitch2: 165,
        yaw1: 154.76,
@@ -11,7 +11,7 @@ export const Detail=[
     },
     {
         id: 1,
-        image: "old.jpeg",
+        image: "2.jpeg",
         pitch1: 190.41,
         pitch2: 155,
         yaw1: 200.76,
@@ -21,11 +21,11 @@ export const Detail=[
      },
      {
         id: 2,
-        image: "old2.jpeg",
+        image: "3.jpeg",
         pitch1: 190.41,
-        pitch2: 165,
-        yaw1: 180.76,
-        yaw2: 210,
+        pitch2: 205,
+        yaw1: 390.76,
+        yaw2: 115,
         id1: 0,
         id2: 1,
      }

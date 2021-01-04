@@ -10,7 +10,7 @@ const hotspotIcon = (hotSpotDiv) => {
   hotSpotDiv.appendChild(image);
 }
 function App() {
- const [image, setimage] = useState("new.jpeg");
+ const [image, setimage] = useState("1.jpeg");
  const [pitch1, setpitch1] = useState(184.41);
  const [pitch2, setpitch2] = useState(165);
  const [yaw1, setyaw1] = useState(154.76);
