@@ -2,7 +2,7 @@ Deployed at http://pano-priyank.netlify.app .
 
 This project is as an application for **NITP Web Team**.
 
-Here, I have made a 360 degree image tour of my house terrace. This projects is for demo purpose to show that in a large scale this technique can be used for making full tour of real-estate properties, institution, monumnets, etc. Since, we are still in the state of pandemic it was necessary to work towards creating virtual reality experinece for web.
+Here, I have made a 360 degree image tour of my house terrace. This projects is for demo purpose to show that in a large scale this technique can be used for making full tour of real-estate properties, institution, monuments, etc. Since, we are still in the state of pandemic it was necessary to work towards creating virtual reality experinece for web.
 
 For this i have used panellum-react library for rendering of images as 360 degree panaroma.
 ## Click below to watch it in action on youtube.
@@ -25,9 +25,9 @@ After this we used panellum code to render image,
         width="100%"
         height="100vh"
         image={image}
-        pitch={10}
-        yaw={10}
-        hfov={110}
+        pitch={pitchscreen}
+        yaw={yawscreen}
+        hfov={90}
         autoRotate={2}
         autoLoad
         onLoad={() => {
@@ -38,21 +38,20 @@ After this we used panellum code to render image,
 This shows the image in 360 view that rotates automatically. To add position of navigation we used .hotspot feature,
 ```javascript
 <Pannellum.Hotspot
-   type="custom"
-   pitch={pitch1}
-   yaw={yaw1}
-  tooltip={hotspotIcon}
-   handleClick={(evt, name) => {
-     const Object = Detail[id1];
-     setid1(Object.id1);
-     setid2(Object.id2);
-     setyaw1(Object.yaw1);
-     setyaw2(Object.yaw2);
-     setpitch1(Object.pitch1);
-     setpitch2(Object.pitch2);
-     setimage(Object.image);
-  }}
-/>
+         type="custom"
+         pitch= {pitch[index]}
+         yaw={yaw[index]}
+        tooltip={hotspotIcon}
+         handleClick={(evt, name) => {
+           const Object = Detail[idnav[index]];
+           setidnav(Object.idNav);
+           setyaw(Object.yaw);
+           setpitch(Object.pitch);
+           setpitchscreen(Object.pitchscreen);
+           setyawscreen(Object.yawscreen);
+           setimage(Object.image);
+        }}
+      />
 ```
 Here, handleClick function takes data from Detail array and displays the new image with new hotspot dynamically. Now to get hotspotIcon as Tooltip we need to define it. For that,
 
@@ -65,6 +64,20 @@ const hotspotIcon = (hotSpotDiv) => {
   image.setAttribute('src',    "https://img.icons8.com/fluent/100/000000/long-arrow-up.png");
   hotSpotDiv.appendChild(image);
 }
+```
+Data Structure that I have used in the cod eis highly dynamic as,
+```javascript
+export const Detail=[
+    {
+       id: 0,
+       image: "1.jpeg",
+       pitch: [184.41,165],
+       yaw: [154.76,210],
+       idNav:[1,2],
+       yawscreen: 10,
+       pitchscreen: 10,
+       }
+];
 ```
 Thats, how we coded this sample app.
 ## Available Scripts
