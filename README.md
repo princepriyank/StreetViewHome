@@ -1,10 +1,12 @@
 Deployed at http://pano-priyank.netlify.app .
 
-Here I have made a 360 degree image tour of my house terrace. This projects is for demo purpose to show that in a large scale this technique can be used for making full tour of real-estate properties, institution, monumnets, etc. Since, we are still in the state of pandemic it was necessary to work towards creating virtual reality experinece for web.
+This project is as an application for **NITP Web Team**.
+
+Here, I have made a 360 degree image tour of my house terrace. This projects is for demo purpose to show that in a large scale this technique can be used for making full tour of real-estate properties, institution, monumnets, etc. Since, we are still in the state of pandemic it was necessary to work towards creating virtual reality experinece for web.
 
 For this i have used panellum-react library for rendering of images as 360 degree panaroma.
 
-# Getting Started with Create React App
+# Quick Start
 
 This project was bootstrapped with,
 
