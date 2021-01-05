@@ -7,9 +7,7 @@ Here, I have made a 360 degree image tour of my house terrace. This projects is 
 For this i have used panellum-react library for rendering of images as 360 degree panaroma.
 ## Click below to watch it in action on youtube.
 
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/lp2T9C0jejo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+[<img src="https://img.youtube.com/vi/lp2T9C0jejo/maxresdefault.jpg" width="50%">](https://youtu.be/lp2T9C0jejo)
 
 
 # Quick Start
