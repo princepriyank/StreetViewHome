@@ -8,7 +8,7 @@ For this i have used panellum-react library for rendering of images as 360 degre
 ## Click below to watch it in action on youtube.
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/lp2T9C0jejo" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/lp2T9C0jejo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
 
 
