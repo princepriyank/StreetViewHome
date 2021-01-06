@@ -1,4 +1,4 @@
-Deployed at http://pano-priyank.netlify.app .
+Deployed at http://panopriyank.netlify.app .
 
 This project is as an application for **NITP Web Team**.
 
@@ -114,7 +114,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Deployment
 
-This app is deployed using netlify at http://pano-priyank.netlify.app .
+This app is deployed using netlify at http://panopriyank.netlify.app .
 To deploy we use script `npm run build` to generate static site at build folder and drag and drop that to netlify.com console.
 
 
